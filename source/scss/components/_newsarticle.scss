@@ -13,11 +13,14 @@
   border-radius: 15px 15px 9px 9px;
   box-shadow: 4px 4px 5px grey;
   margin: 10px 10px;
+  background: $brightblue;
 }
 
 .item-img {
   border-radius: 15px 15px 0 0;
   width: 270px;
+  height: 200px;
+  overflow: hidden;
 }
 
 .item-title {
@@ -29,6 +32,12 @@
 .item-link {
   text-decoration: none;
 }
+.item-link:hover {
+  
+}
+.item-link:visited {
+  
+}
 
 .post-date {
   color: $blue;
@@ -39,6 +48,15 @@
   color: $orange;
   padding-left: 10px;
   margin:5px 0;
+}
+.author-link {
+  text-decoration: none;
+}
+.author-link:hover {
+  
+}
+.author-link:visited {
+  
 }
 .upvote {
   display: flex;
