@@ -1,5 +1,5 @@
 {
-  "name": "Camper News",
+  "name": "campernews",
   "version": "1.0.0",
   "description": "Hottest news for code campers",
   "main": "index.js",
@@ -9,11 +9,13 @@
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
+    "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
     "gulp-postcss": "^6.0.1",
     "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "imagemin-pngquant": "^4.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
