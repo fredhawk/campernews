@@ -1,21 +1,23 @@
+.page-title {
+  text-align: center;
+}
 .wrapper {
-  padding-top: 20px;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 .item {
   width: 270px;
   display: flex;
-  flex-flow: column;
-  justify-content: center;
+  flex-flow: column wrap;
   border-radius: 15px 15px 9px 9px;
   box-shadow: 4px 4px 5px grey;
-  margin: 10px 0;
+  margin: 10px 10px;
 }
 
 .item-img {
   border-radius: 15px 15px 0 0;
+  width: 270px;
 }
 
 .item-title {

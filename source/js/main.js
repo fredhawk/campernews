@@ -1,17 +1,19 @@
 $(document).ready(function() {
+  var newsItemsAPI = "http://www.freecodecamp.com/news/hot"
+  newsArticles(newsItemsAPI);
   
-  newsArticles();
-  
-  function newsArticles() {
-    $.get("http://www.freecodecamp.com/news/hot", function(data){
-      var newsImage = data[0].image;
-      var newsLink = data[0].link;
-      var newsTitle = data[0].headline;
-      var newsPoster = data[0].author.username;
-      var newsPostedDate = data[0].timePosted;
-      var newsUpvotes = data[0].rank;
-      var newsAuthorPic = data[0].author.picture;
+  function newsArticles(newsItemsAPI) {
+    $.get(newsItemsAPI, function(newsItem){
+      var newsImage = newsItem[0].image;
+      var newsLink = newsItem[0].link;
+      var newsTitle = newsItem[0].headline;
+      var newsPoster = newsItem[0].author.username;
+      var newsPostedDate = newsItem[0].timePosted;
+      var newsUpvotes = newsItem[0].rank;
+      var newsAuthorPic = newsItem[0].author.picture;
       console.log(newsImage + " " + newsLink + " " + newsTitle + " " + newsPoster + " " + newsPostedDate + " " + newsUpvotes + " " + newsAuthorPic)
-    }, 'jsonp');
+    });
   }
 });
+
+///Make the whole card a link!!!!!!!!!!!!!!!
