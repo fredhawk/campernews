@@ -1,17 +1,37 @@
 $(document).ready(function() {
   var newsItemsAPI = "http://www.freecodecamp.com/news/hot"
+  var html = "";
+  
   newsArticles(newsItemsAPI);
   
   function newsArticles(newsItemsAPI) {
     $.get(newsItemsAPI, function(newsItem){
-      var newsImage = newsItem[0].image;
-      var newsLink = newsItem[0].link;
-      var newsTitle = newsItem[0].headline;
-      var newsPoster = newsItem[0].author.username;
-      var newsPostedDate = newsItem[0].timePosted;
-      var newsUpvotes = newsItem[0].rank;
-      var newsAuthorPic = newsItem[0].author.picture;
-      console.log(newsImage + " " + newsLink + " " + newsTitle + " " + newsPoster + " " + newsPostedDate + " " + newsUpvotes + " " + newsAuthorPic)
+      newsItem.forEach(function(newsStory) {
+        var newsImage = newsStory.image;
+        var newsLink = newsStory.link;
+        var newsTitle = newsStory.headline.substring(0, 15)+"...";
+        var newsPoster = newsStory.author.username;
+        var newsPostedDate = newsStory.timePosted;
+        var newsUpvotes = newsStory.rank;
+        var newsAuthorPic = newsStory.author.picture;
+        newsPostedDate = new Date(newsPostedDate);
+        newsPostedDate = newsPostedDate.toDateString();
+        console.log(newsImage + " " + newsLink + " " + newsTitle + " " + newsPoster + " " + newsPostedDate + " " + newsUpvotes + " " + newsAuthorPic)
+        
+        html += '<article class="item">';
+        html += '<a href="' + newsLink + '" target="_blank" class="item-link">';
+        html += '<img src ="' + newsImage + '" class="item-img">';
+        html += '<h2 class="item-title">' + newsTitle + '</h2></a>';
+        html += '<p class="post-date">Posted on: ' + newsPostedDate + '</p>';
+        html += '<a href="http://www.freecodecamp.com/' + newsPoster + '" class="author-link" target="_blank">';
+        html += '<p class="author">By ' + newsPoster + '</p></a>';
+        html += '<div class="upvote">';
+        html += '<img src="http://lorempixel.com/20/20/" class="upvote-icon">';
+        html += '<p class="upvotes">' + newsUpvotes + '</p></div></article>'
+        
+      });
+      // add html to .wrapper class
+      $(".wrapper").html(html);
     });
   }
 });
