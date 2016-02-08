@@ -9,7 +9,7 @@ $(document).ready(function() {
       newsItem.forEach(function(newsStory) {
         var newsImage = newsStory.image;
         var newsLink = newsStory.link;
-        var newsTitle = newsStory.headline.substring(0, 15)+"...";
+        var newsTitle = newsStory.headline.substring(0, 25)+"...";
         var newsPoster = newsStory.author.username;
         var newsPostedDate = newsStory.timePosted;
         var newsUpvotes = newsStory.rank;
@@ -32,7 +32,7 @@ $(document).ready(function() {
         html += '<a href="http://www.freecodecamp.com/' + newsPoster + '" class="author-link" target="_blank">';
         html += '<p class="author">By ' + newsPoster + '</p></a>';
         html += '<div class="upvote">';
-        html += '<img src="http://lorempixel.com/20/20/" class="upvote-icon">';
+        html += '<img src="./img/heart.svg" class="upvote-icon">';
         html += '<p class="upvotes">' + newsUpvotes + '</p></div></article>'
         
       });
