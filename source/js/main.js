@@ -14,9 +14,15 @@ $(document).ready(function() {
         var newsPostedDate = newsStory.timePosted;
         var newsUpvotes = newsStory.rank;
         var newsAuthorPic = newsStory.author.picture;
+        
+        if (newsImage === "" || newsImage === "/web/imgs/logo.png") {
+          newsImage = newsAuthorPic;
+        }
+        
         newsPostedDate = new Date(newsPostedDate);
         newsPostedDate = newsPostedDate.toDateString();
-        console.log(newsImage + " " + newsLink + " " + newsTitle + " " + newsPoster + " " + newsPostedDate + " " + newsUpvotes + " " + newsAuthorPic)
+        //console.log(newsImage + " " + newsLink + " " + newsTitle + " " + newsPoster + " " + newsPostedDate + " " + newsUpvotes + " " + newsAuthorPic)
+        console.log(newsImage)
         
         html += '<article class="item">';
         html += '<a href="' + newsLink + '" target="_blank" class="item-link">';
