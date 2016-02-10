@@ -13,7 +13,7 @@
   border-radius: 15px 15px 9px 9px;
   box-shadow: 4px 4px 5px grey;
   margin: 10px 10px;
-  background: $brightblue;
+  background-color: $lightblue;
   transition: all 0.2s ease-in-out;
   transform: scale(1);
 }
@@ -31,8 +31,8 @@
 }
 
 .item-title {
-  color: $lightblue;
-  padding-left: 10px;
+  color: white;
+  padding-left: 20px;
   margin:5px 0;
 }
 
@@ -40,26 +40,25 @@
   text-decoration: none;
 }
 .item-link:hover {
-  
+  color: $darkerlightblue;
 }
 
 .post-date {
-  color: $blue;
+  color: white;
   padding-left: 10px;
   margin:5px 0;
 }
 .author {
-  color: $orange;
+  color: white;
   padding-left: 10px;
   margin:5px 0;
 }
 .author-link {
   text-decoration: none;
 }
-.author-link:hover {
-  
+.author:hover {
+  color: $darkerlightblue;
 }
-
 .upvote {
   display: flex;
   justify-content: flex-start;
@@ -73,6 +72,6 @@
 }
 
 .upvotes {
-  color: $pink;
+  color: white;
   margin: 0;
 }
