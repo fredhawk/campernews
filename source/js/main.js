@@ -29,7 +29,7 @@ $(document).ready(function() {
         // Create the newsarticle 
         html += '<article class="item">';
         html += '<a href="' + newsLink + '" target="_blank" class="item-link">';
-        html += '<img src ="' + newsImage + '" class="item-img" alt="' +  + '">';
+        html += '<img src ="' + newsImage + '" class="item-img" alt="' + newsTitle + '">';
         html += '<h2 class="item-title">' + newsTitle + '</h2></a>';
         html += '<p class="post-date">Posted on: ' + newsPostedDate + '</p>';
         html += '<a href="http://www.freecodecamp.com/' + newsPoster + '" class="author-link" target="_blank" alt="' + newsPoster + '">';
