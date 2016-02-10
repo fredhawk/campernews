@@ -20,23 +20,21 @@
 .item:hover {
   z-index: 2;
   transition: all 0.2s ease-in-out;
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
-
 .item-img {
   border-radius: 15px 15px 0 0;
   width: 230px;
   height: 200px;
   overflow: hidden;
 }
-
 .item-title {
   color: white;
   padding-left: 10px;
   margin:5px 0;
 }
 .item-title:hover {
-  color: $darkerlightblue;
+  color: $darkblue;
 }
 .item-link {
   text-decoration: none;
@@ -55,20 +53,18 @@
   text-decoration: none;
 }
 .author:hover {
-  color: $darkerlightblue;
+  color: $darkblue;
 }
 .upvote {
   display: flex;
   justify-content: flex-start;
   padding-bottom: 10px;
-
 }
 .upvote-icon {
   width: 20px;
   height: 20px;
   padding: 0 10px;
 }
-
 .upvotes {
   color: white;
   margin: 0;
