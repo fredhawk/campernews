@@ -7,7 +7,7 @@
   justify-content: space-around;
 }
 .item {
-  width: 230px;
+  width: 276px;
   display: flex;
   flex-flow: column wrap;
   border-radius: 15px 15px 9px 9px;
@@ -24,14 +24,15 @@
 }
 .item-img {
   border-radius: 15px 15px 0 0;
-  width: 230px;
-  height: 200px;
+  width: 276px;
+  height: 240px;
   overflow: hidden;
 }
 .item-title {
   color: white;
   padding-left: 10px;
   margin:5px 0;
+  font-size: 1.25em;
 }
 .item-title:hover {
   color: $darkblue;
